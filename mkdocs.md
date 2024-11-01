@@ -1,6 +1,7 @@
 site_name: 'Example Documentation'
 repo_url: https://github.com/backstage/backstage
 edit_uri: edit/master/plugins/techdocs-backend/examples/documented-component/docs
+docs_dir: "myDocs"
 
 nav:
 
