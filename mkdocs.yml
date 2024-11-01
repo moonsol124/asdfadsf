@@ -1,13 +1,46 @@
+# Basic site settings
 site_name: "Example Documentation"
-repo_url: https://github.com/backstage/backstage
-edit_uri: edit/master/plugins/techdocs-backend/examples/documented-component/docs
-docs_dir: myDocs
+site_description: "A comprehensive guide for Example Documentation"
+site_author: "Your Name"
 
+# Repository links for editing and viewing the docs
+repo_url: https://github.com/moonsol124/asdfadsf
+edit_uri: edit/main/myDocs # Adjust path if your docs are in a different directory in the repo
+
+# Custom docs directory
+docs_dir: myDocs # This specifies the directory containing your Markdown files
+
+# Navigation structure for the documentation site
 nav:
   - Home: index.md
-  - Subpage: sub-page.md
+  - Getting Started:
+      - Overview: getting-started/overview.md
+      - Installation: getting-started/installation.md
+  - Tutorials:
+      - Tutorial 1: tutorials/tutorial1.md
+      - Tutorial 2: tutorials/tutorial2.md
+  - API Reference: api-reference.md
   - "Code Sample": code/code-sample.md
   - Extensions: extensions.md
 
+# Plugins to enhance MkDocs functionality
 plugins:
-  - techdocs-core
+  - techdocs-core # Essential for integrating with Backstage TechDocs
+  - search # Built-in search functionality
+
+# Theme and styling options
+theme:
+  name: "material" # Popular MkDocs theme; requires `mkdocs-material` package
+  logo: images/logo.png # Path to a logo in your docs
+  favicon: images/favicon.ico # Path to a favicon in your docs
+  palette:
+    primary: "indigo"
+    accent: "pink"
+
+# Markdown extensions to support advanced formatting
+markdown_extensions:
+  - admonition # For notes, warnings, etc.
+  - toc: # Table of contents
+      permalink: true
+  - codehilite: # Syntax highlighting for code blocks
+      guess_lang: fal
